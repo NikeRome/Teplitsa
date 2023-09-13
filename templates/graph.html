@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graphs</title>
+    <style>
+        .graph-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2px;
+        }
+      
+        .graph-container img {
+            width: 700px; /* Изменение ширины графиков */
+            height: auto; /* Автоматическая высота графиков */
+        }
+        
+        .graph-container p {
+            font-size: 12px; /* Размер текста */
+            margin: 0; /* Убрать внешние отступы параграфа */
+            padding: 1px 0; /* Внутренние отступы параграфа (верх/низ: 5px, лево/право: 0) */
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            location.reload(); // Перезагрузка страницы
+        }, 5000); // 5 секунд (5000 миллисекунд)
+    </script>
+</head>
+<body>
+    <div class="graph-container">
+        <img src="data:image/png;base64,{{ temperature_plot }}" />
+    </div>
+    <div class="graph-container">
+        <img src="data:image/png;base64,{{ humidity_plot }}" />
+    </div>
+    <div class="graph-container">
+        <img src="data:image/png;base64,{{ light_plot }}" />
+    </div>
+</body>
+</html>
